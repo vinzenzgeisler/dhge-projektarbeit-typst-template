@@ -1,3 +1,5 @@
+#import "@preview/sourcerer:0.2.1": code
+
 = Konzeption und Umsetzung
 
 Dieses Kapitel ist bewusst allgemein gehalten. Je nach Thema kannst du es fuer Konzeption, Methodik, Umsetzung, Prototyping, Evaluation oder eine Kombination daraus verwenden.
@@ -13,7 +15,9 @@ Die folgenden Ausschnitte sind bewusst neutralisierte Formatbeispiele, die auf t
 === Pipeline-Konfiguration
 
 #figure(
-  ```yaml
+  code(
+    lang: "yaml",
+    ```yaml
   stages:
     - build
     - test
@@ -31,8 +35,9 @@ Die folgenden Ausschnitte sind bewusst neutralisierte Formatbeispiele, die auf t
     image: mcr.microsoft.com/dotnet/sdk:8.0
     script:
       - dotnet test --configuration Release
-  ```
-  ,
+  ```,
+  ),
+  kind: image,
   caption: [Beispiel einer kompakten Build- und Test-Pipeline in YAML],
 )
 
@@ -41,7 +46,9 @@ Solche Ausschnitte eignen sich, wenn in der Arbeit die technische Orchestrierung
 === Skriptlogik zur Validierung
 
 #figure(
-  ```powershell
+  code(
+    lang: "powershell",
+    ```powershell
   function Validate-References {
       param(
           [string[]]$Identifiers,
@@ -64,8 +71,9 @@ Solche Ausschnitte eignen sich, wenn in der Arbeit die technische Orchestrierung
 
       return $valid
   }
-  ```
-  ,
+  ```,
+  ),
+  kind: image,
   caption: [Beispiel einer Validierungs- und Bereinigungsfunktion in PowerShell],
 )
 
@@ -74,7 +82,9 @@ Das Beispiel zeigt ein typisches Muster aus Automatisierungsprojekten: eingehend
 === Konfigurationsdatei
 
 #figure(
-  ```json
+  code(
+    lang: "json",
+    ```json
   {
     "name": "Projektanwendung",
     "short_name": "Projekt",
@@ -82,8 +92,9 @@ Das Beispiel zeigt ein typisches Muster aus Automatisierungsprojekten: eingehend
     "display": "standalone",
     "background_color": "#f2f2f2"
   }
-  ```
-  ,
+  ```,
+  ),
+  kind: image,
   caption: [Beispiel einer kompakten JSON-Konfiguration],
 )
 

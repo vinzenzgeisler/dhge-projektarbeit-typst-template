@@ -98,7 +98,6 @@
       code-block
     },
   )
-  }
 
   cover-page(metadata)
   pagebreak()

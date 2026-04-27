@@ -6,11 +6,6 @@
 #let cover-page(metadata) = {
   let title = meta(metadata, "title", default: [Titel der Projektarbeit])
   let extra = meta(metadata, "cover-extra", default: ())
-  let supervisors = meta(
-    metadata,
-    "supervisors",
-    default: meta(metadata, "supervisor", default: "Prof. Dr. Beispiel"),
-  )
 
   [
     #align(center, heading(title, outlined: false, numbering: none))
@@ -24,7 +19,7 @@
     #data-row("Studiengang", meta(metadata, "degree-program", default: "Praktische Informatik"))
     #data-row("Kurs", meta(metadata, "course", default: "PIA00"))
     #data-row("Praxispartner", meta(metadata, "practice-partner", default: "Praxispartner GmbH"))
-    #data-row("Betreuer", supervisors)
+    #data-row("Betreuer", meta(metadata, "supervisor", default: "Prof. Dr. Beispiel"))
     #for row in extra [
       #data-row(row.at("label", default: ""), row.at("value", default: none))
     ]
@@ -53,6 +48,7 @@
 #let project-report(
   doc,
   metadata: (:),
+  confidentiality-note: none,
   acronyms: (:),
   references: none,
   show-figure-list: true,
@@ -72,7 +68,6 @@
     "mono-fonts",
     default: ("Cascadia Mono", "Consolas", "Courier New"),
   )
-  let confidentiality-note = meta(metadata, "confidentiality-note", default: none)
 
   set page(
     paper: "a4",

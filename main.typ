@@ -12,19 +12,21 @@
   degree-program: "Praktische Informatik",
   course: "PIA00",
   practice-partner: "Praxispartner GmbH",
-  supervisors: (
-    "Prof. Dr. Beispiel",
-    "Prof. Dr. Zweitbeispiel",
-  ),
+  supervisor: "Prof. Dr. Beispiel",
   project-number: 1,
-  // confidentiality-note: [
-  //   Diese Projektarbeit enthaelt vertrauliche Informationen und darf nur
-  //   mit Zustimmung des Praxispartners weitergegeben werden.
-  // ],
   // cover-extra: (
-  //   (label: "Zweitpruefer", value: "Prof. Dr. Zweitbeispiel"),
+  //   (label: "", value: "Prof. Dr. Zweitbeispiel"),
   // ),
 )
+
+// Optional:
+// Sperrvermerk nur aktivieren, wenn die Arbeit vertrauliche Inhalte enthaelt.
+// #let confidentiality-note = [
+//   Diese Projektarbeit enthaelt vertrauliche Informationen und darf nur
+//   mit Zustimmung des Praxispartners weitergegeben werden.
+// ]
+
+#let confidentiality-note = none
 
 // Anpassungspunkt 2:
 // Ersetze die Beispielabkuerzungen durch die Begriffe deiner Arbeit
@@ -48,6 +50,7 @@
 #show: doc => project-report(
   doc,
   metadata: metadata,
+  confidentiality-note: confidentiality-note,
   acronyms: acronyms,
   references: references,
   show-figure-list: true,

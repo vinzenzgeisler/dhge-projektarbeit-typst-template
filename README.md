@@ -7,7 +7,7 @@ Die Vorlage liefert ein sauberes Grundgerüst mit Deckblatt, Frontmatter, Kapite
 ## Was die Vorlage mitbringt
 
 - Deckblatt mit Projektarbeitsnummer I bis IV
-- Mehrzeiliges Betreuerfeld fuer mehrere Betreuer auf dem Deckblatt
+- Einfach erweiterbares Deckblatt mit zusaetzlichen Zeilen
 - Römisch nummeriertes Frontmatter mit Inhaltsverzeichnis
 - Abbildungs- und optionales Tabellenverzeichnis
 - Abkürzungsverzeichnis über `acrostiche`
@@ -59,12 +59,12 @@ Der Einstiegspunkt ist [main.typ](./main.typ). Dort pflegst du die Metadaten und
 4. Ergänze deine Quellen in [sources.bib](./sources.bib).
 5. Aktiviere bei Bedarf in `main.typ` den Sperrvermerk oder den Anhang.
 
-Für mehrere Betreuer kannst du in `metadata` einfach mehrere Einträge in `supervisors` hinterlegen.
+Für einen zweiten Betreuer kannst du in `cover-extra` einfach eine zusätzliche Zeile ergänzen, zum Beispiel mit leerem Label.
+Den Sperrvermerk definierst du separat als eigenen Block und übergibst ihn im `#show`-Aufruf.
 
 ## Wichtige Schalter
 
-- `confidentiality-note` in `metadata`: blendet einen Sperrvermerk ein
-- `supervisors` in `metadata`: erlaubt mehrere Betreuerzeilen auf dem Deckblatt
+- `confidentiality-note` im `#show`-Aufruf: blendet einen Sperrvermerk ein
 - `cover-extra` in `metadata`: fügt zusätzliche Zeilen auf dem Deckblatt hinzu
 - `show-table-list` im `#show`-Aufruf: blendet ein Tabellenverzeichnis ein oder aus
 - `declaration-variant`: `dhge-2026` oder `classic`

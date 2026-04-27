@@ -1,14 +1,14 @@
 = Analyse
 
-Hier beschreibst du den Ist-Zustand, leitest Probleme her und verdichtest sie zu Anforderungen. In vielen Projektarbeiten ist dieses Kapitel der Uebergang von Beschreibung zu begruendeter Entscheidungsgrundlage.
+Dieses Kapitel fuehrt vom beschriebenen Ausgangspunkt zu belastbaren Anforderungen. Je nach Thema kannst du hier den Ist-Zustand analysieren, Handlungsbedarf herleiten und ein Zielbild formulieren.
 
 == Ist-Zustand
 
-Halte aktuelle Prozesse, Systeme, Rollen und Schnittstellen fest. Die Beschreibung sollte praezise genug sein, damit spaetere Verbesserungen nachvollziehbar bewertet werden koennen.
+[Platzhalter: Beschreibe den aktuellen Stand von Prozessen, Systemen, Rollen oder Rahmenbedingungen.]
 
 == Zielbild
 
-Leite aus den Befunden ein fachlich und organisatorisch sinnvolles Zielbild ab.
+[Platzhalter: Leite aus der Analyse ein fachlich und organisatorisch sinnvolles Zielbild ab.]
 
 #figure(
   align(
@@ -16,16 +16,16 @@ Leite aus den Befunden ein fachlich und organisatorisch sinnvolles Zielbild ab.
     grid(
       columns: (1fr, auto, 1fr, auto, 1fr),
       column-gutter: 0.9cm,
-      box(stroke: 1pt + black, inset: 10pt)[Problem],
+      box(stroke: 1pt + black, inset: 10pt)[Ausgangslage],
       [->],
       box(stroke: 1pt + black, inset: 10pt)[Analyse],
       [->],
-      box(stroke: 1pt + black, inset: 10pt)[Ergebnis],
+      box(stroke: 1pt + black, inset: 10pt)[Zielbild],
     ),
   ),
-  caption: [Ein bewusst einfacher Platzhalter fuer Prozess- oder Architekturdiagramme],
+  caption: [Beispielabbildung als Platzhalter fuer eigene Diagramme],
 )
 
 == Anforderungen
 
-Am Ende dieses Kapitels sollten die Anforderungen so beschrieben sein, dass daraus im naechsten Schritt ein Konzept oder eine Loesung entwickelt werden kann.
+[Platzhalter: Formuliere die Anforderungen so, dass daraus im naechsten Kapitel eine Loesung entwickelt oder bewertet werden kann.]

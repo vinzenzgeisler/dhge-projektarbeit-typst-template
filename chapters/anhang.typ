@@ -1,6 +1,6 @@
 = Anhang
 
-Der Anhang ist optional. Typische Inhalte sind:
+Dieses Kapitel ist optional. Typische Inhalte sind:
 
 - ergaenzende Tabellen
 - zusaetzliche Abbildungen
@@ -8,6 +8,6 @@ Der Anhang ist optional. Typische Inhalte sind:
 - Frageboegen oder Bewertungsraster
 
 ```text
-Dieser Abschnitt ist bewusst knapp gehalten.
-Aktiviere ihn in main.typ nur dann, wenn der Anhang fuer die Arbeit wirklich noetig ist.
+Optionaler Platzhalter.
+Aktiviere den Anhang in main.typ nur dann, wenn er fuer deine Arbeit wirklich benoetigt wird.
 ```

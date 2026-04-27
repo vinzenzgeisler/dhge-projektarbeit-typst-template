@@ -6,6 +6,11 @@
 #let cover-page(metadata) = {
   let title = meta(metadata, "title", default: [Titel der Projektarbeit])
   let extra = meta(metadata, "cover-extra", default: ())
+  let supervisors = meta(
+    metadata,
+    "supervisors",
+    default: meta(metadata, "supervisor", default: "Prof. Dr. Beispiel"),
+  )
 
   [
     #align(center, heading(title, outlined: false, numbering: none))
@@ -19,7 +24,7 @@
     #data-row("Studiengang", meta(metadata, "degree-program", default: "Praktische Informatik"))
     #data-row("Kurs", meta(metadata, "course", default: "PIA00"))
     #data-row("Praxispartner", meta(metadata, "practice-partner", default: "Praxispartner GmbH"))
-    #data-row("Betreuer", meta(metadata, "supervisor", default: "Prof. Dr. Beispiel"))
+    #data-row("Betreuer", supervisors)
     #for row in extra [
       #data-row(row.at("label", default: ""), row.at("value", default: none))
     ]
@@ -82,9 +87,17 @@
     set block(above: 24pt, below: 16pt)
     head
   }
-  show raw.where(block: true): block => {
-    set text(font: mono-fonts, size: 9.5pt, lang: "en")
-    block
+  show raw.where(block: true): code-block => block(
+    fill: rgb("#f2f2f2"),
+    stroke: 0.6pt + rgb("#d6d6d6"),
+    radius: 4pt,
+    inset: 10pt,
+    width: 100%,
+    {
+      set text(font: mono-fonts, size: 9.5pt, lang: "en")
+      code-block
+    },
+  )
   }
 
   cover-page(metadata)

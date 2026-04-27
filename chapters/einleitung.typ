@@ -1,15 +1,15 @@
 = Einleitung
 
-Diese Vorlage trennt Metadaten, Layout und Inhalt sauber voneinander. Ersetze diesen Abschnitt durch Problemstellung, Zielsetzung, Abgrenzung und den Aufbau deiner Projektarbeit. Fuer erste Compile-Tests ist bereits eine Beispielquelle hinterlegt @typst-docs.
+Dieses Kapitel ist ein Platzhalter. Ersetze den gesamten Text durch die Einleitung deiner Arbeit. Typischerweise umfasst die Einleitung Problemstellung, Zielsetzung, Abgrenzung und den Aufbau der Arbeit. Dieser Satz enthaelt nur ein Beispielzitat, damit das Literaturverzeichnis in der Vorlage nicht leer bleibt @typst-docs.
 
 == Ausgangssituation
 
-Beschreibe hier den fachlichen und organisatorischen Kontext des Vorhabens. Typisch sind Ausgangslage, Motivation, Relevanz fuer den Praxispartner und der konkrete Handlungsbedarf.
+[Platzhalter: Beschreibe hier den fachlichen und organisatorischen Ausgangspunkt des Vorhabens.]
 
 == Zielsetzung und Abgrenzung
 
-Halte fest, welche Ergebnisse erreicht werden sollen und was bewusst nicht Bestandteil der Arbeit ist. Dadurch werden Erwartungshaltung und Bewertungsrahmen frueh klar.
+[Platzhalter: Formuliere die Ziele der Arbeit und grenze bewusst aus, was nicht behandelt wird.]
 
 == Aufbau der Arbeit
 
-Schliesse die Einleitung mit einem kurzen Kapitelueberblick ab. Das macht die Argumentationslinie der Arbeit frueh nachvollziehbar.
+[Platzhalter: Gib einen kurzen Ueberblick ueber die folgenden Kapitel.]

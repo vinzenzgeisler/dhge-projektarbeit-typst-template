@@ -1,19 +1,27 @@
 # DHGE Projektarbeit Template für Typst
 
-Saubere, veröffentlichbare Typst-Vorlage für Projektarbeiten an der Dualen Hochschule Gera-Eisenach (DHGE). Die Vorlage ist aus mehreren echten Projektständen konsolidiert, aber bewusst von personen-, unternehmens- und projektspezifischen Inhalten befreit.
+Typst-Vorlage für Projektarbeiten an der Dualen Hochschule Gera-Eisenach (DHGE).
 
-Der Fokus liegt auf einer robusten Arbeitsgrundlage für Projektarbeiten. Eine eigene Bachelorarbeit-Variante kann später auf derselben Struktur aufbauen.
+Die Vorlage liefert ein sauberes Grundgerüst mit Deckblatt, Frontmatter, Kapitelstruktur, Literaturverzeichnis und Erklärung am Ende der Arbeit. Alle Inhalte in `chapters/` sind bewusst als Platzhalter angelegt und können vollständig ersetzt werden.
 
 ## Was die Vorlage mitbringt
 
 - Deckblatt mit Projektarbeitsnummer I bis IV
+- Mehrzeiliges Betreuerfeld fuer mehrere Betreuer auf dem Deckblatt
 - Römisch nummeriertes Frontmatter mit Inhaltsverzeichnis
 - Abbildungs- und optionales Tabellenverzeichnis
 - Abkürzungsverzeichnis über `acrostiche`
 - Arabisch nummerierter Hauptteil
 - Literaturverzeichnis mit den beigefügten DHGE-CSL-Dateien
 - DHGE-nahe Eigenständigkeitserklärung von 2026 oder klassische Ehrenwörtliche Erklärung
+- Beispielhafte Code- und Konfigurationsblöcke im Umsetzungskapitel
 - Klare Trennung zwischen Layout (`src/`) und Inhalt (`main.typ`, `chapters/`, `sources.bib`)
+
+## Für wen die Vorlage gedacht ist
+
+- Studierende, die eine DHGE-Projektarbeit mit Typst schreiben wollen
+- Nutzer, die eine vorhandene Grundstruktur lieber anpassen als bei null zu starten
+- Nutzer, die Deckblatt, Verzeichnisse und Erklärung nicht selbst neu aufbauen wollen
 
 ## Schnellstart
 
@@ -46,19 +54,28 @@ Der Einstiegspunkt ist [main.typ](./main.typ). Dort pflegst du die Metadaten und
 ## Anpassung
 
 1. Passe in [main.typ](./main.typ) den Block `metadata` an.
-2. Ersetze die Beispieltexte in `chapters/` durch deinen Inhalt.
-3. Ergänze deine Quellen in [sources.bib](./sources.bib).
-4. Aktiviere bei Bedarf in `main.typ` den Sperrvermerk oder den Anhang.
+2. Ersetze die Platzhaltertexte in `chapters/` durch deinen Inhalt.
+3. Ergänze oder ersetze die Beispielabkürzungen in `main.typ`.
+4. Ergänze deine Quellen in [sources.bib](./sources.bib).
+5. Aktiviere bei Bedarf in `main.typ` den Sperrvermerk oder den Anhang.
+
+Für mehrere Betreuer kannst du in `metadata` einfach mehrere Einträge in `supervisors` hinterlegen.
 
 ## Wichtige Schalter
 
 - `confidentiality-note` in `metadata`: blendet einen Sperrvermerk ein
+- `supervisors` in `metadata`: erlaubt mehrere Betreuerzeilen auf dem Deckblatt
 - `cover-extra` in `metadata`: fügt zusätzliche Zeilen auf dem Deckblatt hinzu
 - `show-table-list` im `#show`-Aufruf: blendet ein Tabellenverzeichnis ein oder aus
 - `declaration-variant`: `dhge-2026` oder `classic`
 
-## Hinweise zur Veröffentlichung
+## Hinweise
 
-- Das Repository ist absichtlich generisch gehalten und enthält keine echten Projektdaten, Firmennamen oder persönlichen Inhalte aus den Quellprojekten.
+- Die Kapiteltexte und Beispieltabellen dienen nur als Startpunkt.
+- Nicht benötigte Verzeichnisse, Kapitel oder Platzhalter kannst du direkt entfernen.
+- Wenn du keine Tabellen oder Abbildungen verwendest, kannst du die zugehörigen Verzeichnisse im `#show`-Aufruf deaktivieren.
+
+## Lizenz
+
 - Die originalen Template-Dateien stehen unter der [MIT-Lizenz](./LICENSE).
 - Für die beigefügten CSL-Dateien in `csl/` siehe [NOTICE.md](./NOTICE.md); sie bleiben separat als Drittmaterial lizenziert.

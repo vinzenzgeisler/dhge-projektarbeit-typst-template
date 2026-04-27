@@ -74,8 +74,7 @@
 #pagebreak()
 
 #include "chapters/fazit.typ"
+#pagebreak()
 
-// Optional:
-// Anhang nur aktivieren, wenn er fuer deine Arbeit wirklich benoetigt wird.
-// #pagebreak()
-// #include "chapters/anhang.typ"
+// Entferne den Anhang, wenn du ihn fuer deine Arbeit nicht benoetigst.
+#include "chapters/anhang.typ"

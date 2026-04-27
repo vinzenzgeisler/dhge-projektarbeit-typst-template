@@ -63,11 +63,6 @@
     "body-fonts",
     default: ("Arial", "Segoe UI", "Calibri"),
   )
-  let mono-fonts = meta(
-    metadata,
-    "mono-fonts",
-    default: ("Cascadia Mono", "Consolas", "Courier New"),
-  )
 
   set page(
     paper: "a4",
@@ -82,17 +77,6 @@
     set block(above: 24pt, below: 16pt)
     head
   }
-  show raw.where(block: true): code-block => block(
-    fill: rgb("#f2f2f2"),
-    stroke: 0.6pt + rgb("#d6d6d6"),
-    radius: 4pt,
-    inset: 10pt,
-    width: 100%,
-    {
-      set text(font: mono-fonts, size: 9.5pt, lang: "en")
-      code-block
-    },
-  )
 
   cover-page(metadata)
   pagebreak()

@@ -14,7 +14,7 @@ Die Vorlage liefert ein sauberes Grundgerüst mit Deckblatt, Frontmatter, Kapite
 - Arabisch nummerierter Hauptteil
 - Literaturverzeichnis mit den beigefügten DHGE-CSL-Dateien
 - DHGE-nahe Eigenständigkeitserklärung von 2026 oder klassische Ehrenwörtliche Erklärung
-- Beispielhafte Code- und Konfigurationsblöcke im Umsetzungskapitel
+- Beispielhafte Code- und Konfigurationsblöcke im Anhang
 - Klare Trennung zwischen Layout (`src/`) und Inhalt (`main.typ`, `chapters/`, `sources.bib`)
 
 ## Für wen die Vorlage gedacht ist
@@ -61,6 +61,7 @@ Der Einstiegspunkt ist [main.typ](./main.typ). Dort pflegst du die Metadaten und
 
 Für einen zweiten Betreuer kannst du in `cover-extra` einfach eine zusätzliche Zeile ergänzen, zum Beispiel mit leerem Label.
 Den Sperrvermerk definierst du separat als eigenen Block und übergibst ihn im `#show`-Aufruf.
+Wenn du keinen Anhang brauchst, kannst du das `#include "chapters/anhang.typ"` in `main.typ` einfach entfernen.
 
 ## Wichtige Schalter
 

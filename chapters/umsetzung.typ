@@ -1,5 +1,3 @@
-#import "@preview/sourcerer:0.2.1": code
-
 = Konzeption und Umsetzung
 
 Dieses Kapitel ist bewusst allgemein gehalten. Je nach Thema kannst du es fuer Konzeption, Methodik, Umsetzung, Prototyping, Evaluation oder eine Kombination daraus verwenden.
@@ -10,95 +8,15 @@ Dieses Kapitel ist bewusst allgemein gehalten. Je nach Thema kannst du es fuer K
 
 == Beispielhafte technische Darstellung
 
-Die folgenden Ausschnitte sind bewusst neutralisierte Formatbeispiele, die auf typischen technischen Darstellungen aus realen Projektarbeiten basieren. Sie zeigen, wie Build-Pipelines, Skriptlogik und Konfigurationsdateien in einer Projektarbeit eingebunden werden koennen.
+In vielen Projektarbeiten ist es sinnvoll, laengere technische Ausschnitte nicht im Hauptteil, sondern gesammelt im Anhang abzulegen. So bleibt das Kapitel lesbar, waehrend Quellcode, Konfigurationsdateien oder Pipeline-Definitionen trotzdem dokumentiert werden koennen.
 
-=== Pipeline-Konfiguration
+Fuer dieses Template liegen deshalb die ausfuehrlicheren Beispielausschnitte im Anhang. Dort findest du:
 
-#figure(
-  code(
-    lang: "yaml",
-    ```yaml
-  stages:
-    - build
-    - test
-    - package
+- eine kompakte YAML-Pipeline
+- eine Beispielroutine fuer Validierung und Bereinigung
+- eine einfache JSON-Konfiguration
 
-  build:
-    stage: build
-    image: mcr.microsoft.com/dotnet/sdk:8.0
-    script:
-      - dotnet restore
-      - dotnet build --configuration Release
-
-  test:
-    stage: test
-    image: mcr.microsoft.com/dotnet/sdk:8.0
-    script:
-      - dotnet test --configuration Release
-  ```,
-  ),
-  kind: image,
-  caption: [Beispiel einer kompakten Build- und Test-Pipeline in YAML],
-)
-
-Solche Ausschnitte eignen sich, wenn in der Arbeit die technische Orchestrierung eines Prozesses beschrieben werden soll, zum Beispiel fuer Build-, Test- oder Deployment-Schritte.
-
-=== Skriptlogik zur Validierung
-
-#figure(
-  code(
-    lang: "powershell",
-    ```powershell
-  function Validate-References {
-      param(
-          [string[]]$Identifiers,
-          [string]$Context,
-          [ValidateSet('Users', 'Groups', 'Apps')]
-          [string]$Type
-      )
-
-      $valid = @()
-
-      foreach ($id in $Identifiers) {
-          if (Test-TargetObject -Context $Context -Type $Type -Identifier $id) {
-              $valid += $id
-          }
-      }
-
-      if ($valid.Count -eq 0) {
-          return @('placeholder')
-      }
-
-      return $valid
-  }
-  ```,
-  ),
-  kind: image,
-  caption: [Beispiel einer Validierungs- und Bereinigungsfunktion in PowerShell],
-)
-
-Das Beispiel zeigt ein typisches Muster aus Automatisierungsprojekten: eingehende Referenzen werden geprueft, bereinigt und bei Bedarf mit Fallback-Werten abgesichert.
-
-=== Konfigurationsdatei
-
-#figure(
-  code(
-    lang: "json",
-    ```json
-  {
-    "name": "Projektanwendung",
-    "short_name": "Projekt",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#f2f2f2"
-  }
-  ```,
-  ),
-  kind: image,
-  caption: [Beispiel einer kompakten JSON-Konfiguration],
-)
-
-Auch kurze Konfigurationsdateien lassen sich so dokumentieren, ohne dass der Haupttext mit Formatdetails ueberladen wird.
+Im Hauptteil reicht haeufig eine knappe Beschreibung der technischen Idee. Wenn einzelne Zeilen ausfuehrlich analysiert oder direkt referenziert werden sollen, kannst du weiterhin auch kuerzere Ausschnitte direkt im Kapitel platzieren.
 
 == Ergebnisdarstellung
 
